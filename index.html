@@ -1,1 +1,142 @@
-.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fintrack</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- NAV -->
+<nav>
+  <div class="logo">Fintrack</div>
+  <button class="menu-toggle" aria-label="toggle menu">☰</button>
+  <ul>
+    <li><a href="#inflation">Inflation</a></li>
+    <li><a href="#calculator">Calculator</a></li>
+    <li><a href="#investing">Investing</a></li>
+  </ul>
+</nav>
+
+  <!-- HERO (text LEFT, svgs RIGHT using flex) -->
+  <section class="hero" aria-labelledby="hero-heading">
+<div class="hero-left">
+  <h1 id="hero-heading" class="hero-heading">Simple tools to understand your finances</h1>
+  <p>Visualize, calculate and learn smart investing, all in one place! Here are some clean tools and clear explanations to help you make better financial choices.</p>
+  <div class="hero-ctas">
+    <!-- Goes to the first tool section -->
+    <button class="btn primary" onclick="location.href='#inflation'">Explore Tools</button>
+    
+    <!-- Goes to the calculator section -->
+    <button class="btn ghost" onclick="location.href='#calculator'">Estimate Projections</button>
+  </div>
+</div>
+
+
+    <div class="hero-right" aria-hidden="false">
+      <div class="illustration-stack" role="img" aria-label="Finance illustrations">
+        
+        
+        
+
+
+
+<svg width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg" class="spinning-orb">
+  <defs>
+    <radialGradient id="orbShading" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#92736c" />
+      <stop offset="50%" stop-color="#5e4a45" />
+      <stop offset="100%" stop-color="#2b2b2b" />
+    </radialGradient>
+
+    <radialGradient id="orbGlow" cx="50%" cy="50%" r="80%">
+      <stop offset="0%" stop-color="#c08497" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#f8f8f8" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Ambient glow -->
+  <circle cx="400" cy="400" r="160" fill="url(#orbGlow)" />
+
+  <!-- Main orb -->
+  <circle cx="400" cy="400" r="140" fill="url(#orbShading)" />
+
+  <!-- Large floating bobs -->
+  <g>
+    <circle class="bob" cx="650" cy="250" r="60" fill="url(#orbShading)" />
+    <circle class="bob" cx="550" cy="350" r="70" fill="url(#orbShading)" />
+    <circle class="bob" cx="450" cy="250" r="80" fill="url(#orbShading)" />
+  </g>
+</svg>
+
+
+
+
+
+
+      </div>
+    </div>
+  </section>
+
+
+
+<!-- Inflation Section -->
+<section id="inflation" class="stage">
+  <div class="stage-content">
+    <div class="stage-text">
+      <div class="eyebrow">Powerful Visualizations</div>
+      <h2>Inflation Tool</h2>
+      <p>Understand how inflation changes the value of your money over time with easy to understand visuals and charts.</p>
+      <button onclick="location.href='inflation/'" class="btn primary">Try Inflation Tool</button>
+    </div>
+    <div class="stage-image">
+      <img src="images/inflation-mobile.png" alt="Inflation Tool Screenshot">
+    </div>
+  </div>
+</section>
+
+<!-- Calculator Section -->
+<section id="calculator" class="stage alt">
+  <div class="stage-content reverse">
+    <div class="stage1-text">
+      <div class="eyebrow">Numbers Made Easy</div>
+      <h2>ROI Calculator</h2>
+      <p>Crunch numbers in seconds, whether it’s savings, loans or any type of return on investments, this tool makes financial math easy and reliable.</p>
+      <button onclick="location.href='calculator/'" class="btn primary">Open Calculator</button>
+    </div>
+    <div class="stage-image">
+      <img src="images/calculator-mobile.png" alt="Calculator Screenshot">
+    </div>
+  </div>
+</section>
+
+<!-- Investing Section -->
+<section id="investing" class="stage">
+  <div class="stage-content">
+    <div class="stage-text">
+      <h2>Investing Guide</h2>
+      <p>Learn step by step how to start investing smartly. Perfect for beginners.</p>
+      <button disabled class="btn ghost">Coming Soon</button>
+    </div>
+    <div class="stage-image">
+      <img src="images/investing-mobile.png" alt="Investing Guide Screenshot">
+    </div>
+  </div>
+</section>
+
+
+  <!-- FOOTER -->
+  <footer>© 2025 Fintrack Finance Toolkit | Made by Nofal Zia</footer>
+
+  <script>
+    // Mobile menu toggle
+    const toggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('nav ul');
+    toggle?.addEventListener('click', () => navLinks.classList.toggle('active'));
+    // no extra JS needed for the intro animations — CSS handles load animations
+  </script>
+</body>
+</html>
