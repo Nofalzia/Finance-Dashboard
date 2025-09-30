@@ -57,10 +57,12 @@ nav {
 /* Desktop-specific adjustments */
 @media (min-width: 769px) {
   nav {
-    position: sticky;      /* keeps pill floating */
+    background-color: rgb(255, 0, 0);
+    position: absolute;      /* keeps pill floating */
     top: 1rem;             /* small gap from top */
     justify-content: center;
     gap: 3rem;
+    
   }
 
   nav .logo {
@@ -80,7 +82,8 @@ nav {
 @media (max-width: 768px) {
   nav {
     max-width: 100%;     /* full-width for mobile */
-    border-radius: 0;    /* no pill on mobile */
+    border-radius: 0;
+    background-color: rgba(255, 0, 0, 0);    /* no pill on mobile */
     box-shadow: none;    /* optional: remove shadow */
   }
 }
@@ -202,11 +205,11 @@ nav a:hover{color:var(--primary-dark)}
   }
 
   nav {
+    background-color: rgba(255, 0, 0, 0);
     border: none;
     border-radius: 0;
     box-shadow: none;
-    padding: 0.75rem 2rem;
-    background: rgba(255, 255, 255, 0.95); /* solid white for clarity */
+    padding: 0.75rem 2rem; 
   }
   
   .logo{
