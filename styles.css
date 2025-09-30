@@ -57,8 +57,7 @@ nav {
 /* Desktop-specific adjustments */
 @media (min-width: 769px) {
   nav {
-    background-color: rgb(255, 0, 0);
-    position: absolute;      /* keeps pill floating */
+    position: sticky;      /* keeps pill floating */
     top: 1rem;             /* small gap from top */
     justify-content: center;
     gap: 3rem;
