@@ -483,7 +483,7 @@ footer{background:var(--primary-dark);color:#fff;text-align:center;padding:1.2re
 }
 
 .spinning-orb {
-  animation: spin 300s linear infinite;
+  animation: spin 500s linear infinite;
   transform-origin: center;
 }
 
