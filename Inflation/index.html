@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inflation Impact Visualizer</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <h1>Inflation Impact Visualizer</h1>
+      <p>Inflation is like termites, silent but destructive. Over time, it chips away at your purchasing power. Below, you’ll see exactly how much purchasing power you’ve lost through the years.</p>
+    </header>
+
+    <!-- API Status -->
+    <div class="api-status-container">
+      <div id="apiStatus" class="api-status">
+        <svg class="status-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <span>Checking API status...</span>
+      </div>
+    </div>
+
+    <!-- Interactive Note Section -->
+    <section class="interactive-section">
+      <h2>Interactive Visualization</h2>
+<p style="text-align: center; margin: 0 auto; display: block;">
+  Drag the slider to see how a 5,000 PKR note has changed in value over time.
+</p>
+<br>
+
+      
+      <div class="interactive-content">
+        <div class="note-wrapper">
+          <img id="noteImage" src="5000pkr.png" alt="5000 PKR Note">
+          <div id="noteOverlay"></div>
+        </div>
+        
+        <div class="slider-container">
+          <input id="yearSlider" type="range" min="2020" max="2025" step="1" value="2020" class="slider">
+          <div class="slider-labels">
+            <span>2020</span>
+            <span>2021</span>
+            <span>2022</span>
+            <span>2023</span>
+            <span>2024</span>
+            <span>2025</span>
+          </div>
+        </div>
+        
+<div class="value-explanation">
+  <p>
+    In <span id="selectedYear" class="highlight-year">2020</span>,
+    <span id="noteValue" class="highlight-value">PKR 5,000</span>
+    had the same purchasing power as
+    <strong id="equivalentValue" class="equivalent-value" aria-live="polite">PKR 5,000</strong>
+    in today's money.
+  </p>
+</div>
+
+
+      </div>
+    </section>
+
+        <!-- Value Cards -->
+    <section class="value-cards">
+      <div class="value-card">
+        <div class="value-label">Initial Value</div>
+        <div class="value-amount">5,000 PKR</div>
+        <div class="value-year">2020</div>
+      </div>
+      
+      <div class="value-card">
+        <div class="value-label">Current Value</div>
+        <div id="currentValue" class="value-amount">5,000 PKR</div>
+        <div id="currentYear" class="value-year">2020</div>
+      </div>
+      
+      <div class="value-card">
+        <div class="value-label">Value Loss</div>
+        <div id="valueLoss" class="value-amount">0 PKR</div>
+        <div class="value-year">Since 2020</div>
+      </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline-section">
+      <h2>Value Over Time</h2>
+<p style="text-align: center; margin: 0 auto; display: block;">
+  A year-by-year breakdown of how inflation has reduced purchasing power.
+</p><br>
+
+      <div id="timeline" class="timeline-cards"></div>
+    </section>
+
+    <!-- Chart Section -->
+    <section class="chart-section">
+      <h2>Purchasing Power Decline (2020–2025)</h2>
+      <div class="chart-container">
+        <canvas id="inflationChart"></canvas>
+      </div>
+    </section>
+
+    <!-- Explanation Section -->
+<section class="explanation-section">
+  <h2>What to Do About It?</h2>
+  <div class="explanation-content">
+    <p>
+      Inflation works quietly in the background, shrinking the value of your money year after year. 
+      What felt like enough in 2020 doesn’t go nearly as far today and that’s what this tool is here to show you, 
+      using live data from the World Bank API. 
+    </p>
+
+<p>
+  The good news: you don’t have to just watch your money lose strength.  
+  Smart investments can outpace inflation and help you grow your wealth.  
+</p>
+
+    <button class="flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-2xl shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300">
+  <!-- Button text -->
+  <span class="font-semibold text-lg"><h1>🌱</h1> Protect Your Money <br> (coming soon) <h1>🌱</h1></span>
+</button>
+
+  </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>Data sourced from World Bank API with fallback to Pakistan Bureau of Statistics</p>
+      <p>© 2025 Fintrack Finance Toolkit | Made by Nofal Zia</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
