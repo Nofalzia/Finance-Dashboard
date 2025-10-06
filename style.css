@@ -1,0 +1,174 @@
+:root {
+  --primary: #92736c;        /* Muted taupe, main brand color */
+  --primary-dark: #5e4a45;   /* Darker taupe for hover/active */
+  --secondary: #fdf1f5;      /* Soft blush background */
+  --accent: #c08497;         /* Dusty rose accent */
+  --light-bg: #e7dbd8;       /* Use blush as page background */
+  --card-bg: #ffffff;        /* Clean white cards */
+  --text-main: #2b2b2b;      /* Deep charcoal text */
+  --text-light: #6b6b6b;     /* Muted gray text */
+  --border: #e5d6d9;         /* Soft rosy border */
+  --success: #000000;        /* Muted green for positive values */
+  --warning: #e0a800;        /* Golden amber for warnings */
+  --danger: #c24141;         /* Soft but firm red */
+}
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+    
+    body {
+      background-color: var(--light-bg);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+    
+    .card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .gradient-bg {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    }
+    
+    input {
+      transition: all 0.3s ease;
+    }
+    
+    input:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+    }
+    
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      transition: all 0.3s ease;
+    }
+    
+    .btn-primary:hover {
+      filter: brightness(110%);
+      box-shadow: 0 4px 8px rgba(37, 99, 235, 0.2);
+    }
+    
+    .summary-card {
+      border-left: 4px solid var(--primary);
+    }
+    
+    .summary-card.green {
+      border-left-color: var(--success);
+    }
+    
+    .summary-card.purple {
+      border-left-color: var(--accent);
+    }
+    
+    .tabs {
+      display: flex;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 1.5rem;
+    }
+    
+    .tab {
+      padding: 0.75rem 1.5rem;
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+      font-weight: 500;
+      color: var(--text-light);
+    }
+    
+    .tab.active {
+      border-bottom-color: var(--primary);
+      color: var(--primary);
+    }
+    
+    .icon-container {
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1rem;
+    }
+    
+    .icon-blue {
+      background-color: rgba(37, 99, 235, 0.1);
+      color: var(--primary);
+    }
+    
+    .icon-green {
+      background-color: rgba(16, 185, 129, 0.1);
+      color: var(--success);
+    }
+    
+    .icon-cyan {
+      background-color: rgba(6, 182, 212, 0.1);
+      color: var(--accent);
+    }
+    
+    .input-with-icon {
+      position: relative;
+    }
+    
+    .input-icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-light);
+    }
+    
+    .input-field {
+      padding-left: 40px;
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      height: 48px;
+      background: var(--card-bg);
+      color: var(--text-main);
+    }
+    
+    .result-box {
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
+    }
+    
+   /* keep original class names (as requested) */
+/* subtle, warm glows that match the #92736c / #fdf1f5 theme */
+
+.result-blue {
+  background-color: rgba(146, 115, 108, 0.12); /* taupe glow (from --primary) */
+}
+
+.result-green {
+  background-color: rgba(146, 115, 108, 0.12);  /* muted green (from --success) */
+}
+
+.result-gray {
+  background-color: rgba(146, 115, 108, 0.12); /* warm neutral grey */
+}
+
+.result-purple {
+  background-color: rgba(146, 115, 108, 0.12); /* dusty rose (from --accent) */
+}
+
+/* small common niceties so result blocks feel unified */
+.result-blue,
+.result-green,
+.result-gray,
+.result-purple {
+  padding: 0.75rem;
+  border-radius: 8px;
+  transition: background-color 150ms ease, transform 120ms ease;
+}
+.result-blue:hover,
+.result-green:hover,
+.result-gray:hover,
+.result-purple:hover {
+  transform: translateY(-3px);
+}
