@@ -65,8 +65,9 @@ nav {
   }
 
   nav .logo {
+    font-family: Georgia, 'Times New Roman', Times, serif;
     margin-right: auto;   /* push logo to left inside pill */
-    font-weight: 700;
+    font-weight: 900;
     color: var(--primary-dark);
   }
 
@@ -126,7 +127,7 @@ nav a:hover{color:var(--primary-dark)}
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.5); /* semi-transparent white */
+  background: rgba(255, 255, 255, 0.8); /* semi-transparent white */
   z-index: 0;
 }
 
@@ -154,13 +155,14 @@ nav a:hover{color:var(--primary-dark)}
 }
 
 .hero-left .hero-heading{
-  font-size:clamp(1.6rem,4vw,2.4rem);
+  font-size: 4rem;
   line-height:1.05;
   color:var(--primary-dark);
   opacity:0;
   transform:translateY(18px);
   /* animation runs on load */
   animation: heroFloat 700ms cubic-bezier(.2,.9,.2,1) .25s forwards;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .hero-left p{
